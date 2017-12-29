@@ -1,6 +1,6 @@
-function Dumb(){
+function Dumb(y){
     this.x = random(0,width);
-    this.y = 10;
+    this.y = y;
     this.toDelete = false;
     this.show = function(){
         fill(255);
@@ -14,6 +14,12 @@ function Dumb(){
             return true;
         } else{
             return false;
+        }
+    }
+    
+    this.ground = function(){
+        if(this.y > height){
+            noLoop();
         }
     }
 }
